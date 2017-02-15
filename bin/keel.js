@@ -1,6 +1,7 @@
 #! /usr/bin/env node
 
 const program = require('commander');
+const init = require('../lib/init');
 
 program
     .version(require('../package.json').version)
@@ -9,7 +10,8 @@ program
     .parse(process.argv);
 
 if (program.init) {
-    console.log('init project', process.env.PWD);
+    const pwd = process.env.PWD;
+    init.init(pwd);
 };
 // if (program.pineapple) console.log('  - pineapple');
 // if (program.bbqSauce) console.log('  - bbq');
