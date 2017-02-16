@@ -11,7 +11,7 @@ program
 
 if (program.init) {
     const pwd = process.env.PWD;
-    init.init(pwd);
+    init.init(process, pwd);
 };
 // if (program.pineapple) console.log('  - pineapple');
 // if (program.bbqSauce) console.log('  - bbq');
