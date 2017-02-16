@@ -23,14 +23,26 @@ keel init
 .
 ├── dist
 │   ├── app
-│   └── static
+│   ├── static
+│   ├── DEMO            // DEMO 
+│   └── [PageName]      // PageName(用户自定义)
 └── src
-    ├── app // 项目程序入口
-    ├── page  // 项目页面入口
-    └── static  // 项目静态资源入口
-        ├── js // 项目的js目录
-        ├── css // 项目的js目录
-        └── img // 项目的图片目录
+    ├── app                 // 项目程序入口(jsx)
+    │   ├── DEMO
+    │   └── [PageName]
+    ├── page                // 项目页面入口
+    │   ├── DEMO            
+    │   └── [PageName]      
+    └── static              // 项目静态资源入口
+        ├── js              // 项目的js目录
+        │   ├── DEMO
+        │   └── [PageName]  
+        ├── sass            // 项目的sass目录
+        │   ├── DEMO
+        │   └── [PageName]  
+        └── img             // 项目的图片目录
+            ├── DEMO
+            └── [PageName]  
 ```
 
 ## [TODO] 计划的接口如下：
