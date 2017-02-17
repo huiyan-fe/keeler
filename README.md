@@ -52,9 +52,13 @@ keel addpage [pagename]
 ```
 
 ```javascript
-keel build
+keel -b
 ```
 
 ```javascript
-keel build:online
+keel -b online
+```
+
+```javascript
+keel -ls
 ```
