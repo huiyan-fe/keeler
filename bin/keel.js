@@ -23,7 +23,7 @@ if (program.build) {
     if (program.build === 'online') {
         build.online(process, pwd);
     } else {
-        build.dev(process, pwd);
+        build.dev(process, pwd, program.build);
     }
 };
 
