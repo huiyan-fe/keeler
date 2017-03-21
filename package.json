@@ -1,6 +1,6 @@
 {
   "name": "do-keel",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "[构建中,请勿使用]  keel 是基于react.js的脚手架，可以一键生成react项目的环境。",
   "main": "index.js",
   "bin": {
