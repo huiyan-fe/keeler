@@ -1,5 +1,5 @@
 # keel
-[构建中,请勿使用]  keel 是基于react.js的脚手架，可以一键生成react项目的环境。
+[构建中,谨慎使用]  keel 是基于react.js的脚手架，可以一键生成react项目的环境。
 
 # 安装
 
@@ -45,23 +45,36 @@ keel init
             └── [PageName]  
 ```
 
+# 构建
+
+可以通过keel -b 进行构建项目，keel会扫描目录下的所有 `*.entry.jsx` 文件，自动制作编译配置文件(`.keel/entry.js`)，
+
+```bash
+keel -b
+```
+
+如果想编译指定的项目 可以使用 `keel -b Name` 这样keel只会编译 Name文件夹下的 `*.entry.jsx` 以及 `Name.entry.jsx`
+
+如下配置会编译 test和abc
+```bash
+keel -b test,abc
+```
+
+执行 `keel -b online` 会进行上线的前的编译（压缩、合并、hash）等，并将产出的文件放置到`online`目录中
+
+```bash
+keel -b online
+```
+
 ## [TODO] 计划的接口如下：
+
+新增一个项目页面，同时会建立项目的index.html , pagename.jsx , pagename.scss 文件
 
 ```javascript
 keel addpage [pagename]
 ```
 
-```javascript
-keel -b
-```
-
-```javascript
-keel -b online
-```
-
-```javascript
-keel -b -p page
-```
+支持其他类库的编译（vue等）
 
 ```javascript
 keel -ls
