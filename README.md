@@ -37,7 +37,7 @@ keel init
         ├── js              // 项目的js目录
         │   ├── DEMO
         │   └── [PageName]  
-        ├── sass            // 项目的sass目录
+        ├── scss            // 项目的sass目录
         │   ├── DEMO
         │   └── [PageName]  
         └── img             // 项目的图片目录
