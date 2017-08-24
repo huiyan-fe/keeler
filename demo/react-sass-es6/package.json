@@ -1,0 +1,46 @@
+{
+    "name": "traffic-light",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "dev:webpack": "webpack -w --config webpack.config.js",
+        "dev:webpackServer": "webpack-dev-server --config webpack.config.js --open",
+        "dev:gulp": "NODE_ENV=development gulp",
+        "dev": "npm run dev:gulp & npm run dev:webpackServer",
+        "build:gulp": "gulp",
+        "build:webpack": "webpack -p",
+        "build": "npm run build:webpack && npm run build:gulp"
+    },
+    "repository": {
+        "type": "git",
+        "url": "ssh://zhuwenlong@icode.baidu.com:8235/baidu/jiaotongyun-fe-tools/traffic-light"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "babel-runtime": "^6.26.0",
+        "gulp-sass": "^3.1.0",
+        "material-ui": "^0.19.0",
+        "react": "^15.6.1",
+        "react-bmap": "^1.0.32",
+        "react-dom": "^15.6.1"
+    },
+    "devDependencies": {
+        "babel-cli": "^6.26.0",
+        "babel-core": "^6.26.0",
+        "babel-loader": "^7.1.1",
+        "babel-plugin-transform-runtime": "^6.23.0",
+        "babel-preset-env": "^1.6.0",
+        "babel-preset-react": "^6.24.1",
+        "eslint": "^4.4.1",
+        "eslint-config-google": "^0.9.1",
+        "eslint-plugin-react": "^7.2.1",
+        "gulp": "^3.9.1",
+        "marine": "^1.0.2",
+        "webpack": "^3.5.5",
+        "webpack-dev-server": "^2.7.1",
+        "webpack-stream": "^4.0.0"
+    }
+}
