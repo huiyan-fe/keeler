@@ -75,16 +75,3 @@ or
 ```
 yarn dev:gulp
 ```
-
-
-
-
-
-
-"dev:webpack": "webpack -w --config webpack.config.js",
-        "dev:webpackServer": "webpack-dev-server --config webpack.config.js --open",
-        "dev:gulp": "NODE_ENV=development gulp",
-        "dev": "npm run dev:gulp & npm run dev:webpackServer",
-        "build:gulp": "gulp",
-        "build:webpack": "webpack -p",
-        "build": "npm run build:webpack && npm run build:gulp"
