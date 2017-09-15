@@ -5,9 +5,6 @@
 const env = process.env.NODE_ENV || 'production';
 console.log(env);
 
-
-
-
 const webpackConfig = require('./webpack.config.js');
 const gulp = require('gulp');
 const webpack = require('webpack-stream');
