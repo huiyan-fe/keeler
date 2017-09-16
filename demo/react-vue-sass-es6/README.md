@@ -1,32 +1,33 @@
-### This is a front-end envrioment for react.js and vue.js
+# This is a front-end envrioment for react.js and vue.js
 
-#### React.js
-
-##### To start react.js you need config the webpack.config.js
+## React: To start react.js you need config the webpack.config.js
 
 module.exports.entry
 
-```
+```javascript
 entry: {
     // 'app/index': './src/app/index.jsx',
     'app/index': './src/app/index.vue.js',
 },
 ```
 
-##### To start vue.js you need change config the wepback.config.js
+## Vue: To start vue.js you need change config the wepback.config.js
 
 module.exports.entry
 
-```
+```javascript
 entry: {
     // 'app/index': './src/app/index.jsx',
     'app/index': './src/app/index.vue.js',
 },
 ```
+
+## Automatical
+
 > this enviroment will load *.jsx as react module, *.vue as vue module automatically
 
 
-====
+# USEAGE
 
 ### 安装
 
