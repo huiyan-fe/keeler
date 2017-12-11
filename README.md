@@ -48,6 +48,8 @@ keeler -i
 npm run dev
 ```
 
+或
+
 ```bash
 npm run build
 ```
@@ -59,7 +61,7 @@ npm run build
 同时该命令会自动创建webserver，并在浏览器中打开。该页面会自动监听文件的修改，并随之自动刷新。
 
 
-### 2.1.1 npm run build
+### 2.1.2 npm run build
 
 该命令用于生产环境，会自动完成编译压缩等事物。
 
