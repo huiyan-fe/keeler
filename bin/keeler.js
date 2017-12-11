@@ -20,11 +20,7 @@ if (program.init) {
 
 if (program.build) {
     const pwd = process.env.PWD;
-    if (program.build === 'online') {
-        build.online(process, pwd);
-    } else {
-        build.dev(process, pwd, program.build);
-    }
+    build.scanEntry(process, pwd, program.build);
 };
 
 
