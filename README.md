@@ -42,15 +42,28 @@ keeler -i
 
 ## 2.开发
 
-可以通过以下命令经常开发
+初始化之后，你需要通过 npm install 安装所需的依赖，然后可以通过以下命令进行开发
 
 ```bash
 npm run dev
 ```
 
-该命令会自动启动编译程序，对页面进行编辑，在进行编译之钱，keeler会通过 keeler -b 去生成入口文件配置。详见 `keeler -b` 的说明。
+```bash
+npm run build
+```
 
-### 2.1 keeler -b
+### 2.1.1 npm run dev
+
+该命令用于开发阶段，其会自动启动编译程序，对页面进行编译（在进行编译之前，keeler会通过 keeler -b 去生成入口文件配置, 详见 `keeler -b` 的说明）。
+
+同时该命令会自动创建webserver，并在浏览器中打开。该页面会自动监听文件的修改，并随之自动刷新。
+
+
+### 2.1.1 npm run build
+
+该命令用于生产环境，会自动完成编译压缩等事物。
+
+### 2.1.3 keeler -b
 
 开发过程中，使用者不需要手动配置webpack的入口，keeler会自动去寻找雷士 `*.entry.jsx`以及 `*.entry.scss` 的文件，并自动生成配置文件。该过程通过 `keeler -b` 执行，默认已经写入到了`npm run build`，`npm run dev`中，默认情况下用户可以不用去关心这个步骤。
 
