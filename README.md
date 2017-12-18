@@ -60,6 +60,19 @@ npm run build
 
 同时该命令会自动创建webserver，并在浏览器中打开。该页面会自动监听文件的修改，并随之自动刷新。
 
+如果需要编辑指定的模块可以通过PAGE参数指定
+
+如：
+
+```
+PAGE=demo,pagea npm run dev
+```
+
+或
+
+```
+PAGE=demo,pagea yarn dev
+```
 
 ### 2.1.2 npm run build
 

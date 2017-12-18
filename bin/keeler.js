@@ -11,7 +11,7 @@ program
     .version(require('../package.json').version)
     .usage('[options] [param]')
     .option('-i, --init', 'init project')
-    .option('-b, --build', 'build project')
+    .option('-b, --build [name]', 'build project')
 
 
 program
@@ -32,13 +32,19 @@ program
 
 program.parse(process.argv);
 
+// console.log(program.args)
+
 if (program.init) {
     const pwd = process.env.PWD;
     init.init(process, pwd);
 };
 
 if (program.build) {
+    // console.log(process.env.npm_config_page)
+    // console.log('xxxxxxxxxx', program.build)
+        // console.log('---', program.build !== true)
     const pwd = process.env.PWD;
+    const key = program.build;
     build.scanEntry(process, pwd, program.build);
 };
 

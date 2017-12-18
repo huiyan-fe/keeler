@@ -8,7 +8,7 @@
         "dev:webpack": "webpack -w --config webpack.config.js",
         "dev:webpackServer": "webpack-dev-server --config webpack.config.js --open",
         "dev:gulp": "NODE_ENV=development gulp",
-        "dev": "keeler -b && npm run dev:webpack & npm run dev:webpackServer",
+        "dev": "keeler -b $PAGE && npm run dev:webpack & npm run dev:webpackServer",
         "build:gulp": "gulp",
         "build:webpack": "webpack -p",
         "build": "keeler -b && npm run build:webpack && npm run build:gulp"
