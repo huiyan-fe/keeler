@@ -1,6 +1,6 @@
 {
     "name": "keeler",
-    "version": "0.0.22",
+    "version": "0.0.23",
     "description": "keeler 是基于react.js的脚手架，可以一键生成react项目的环境。",
     "main": "index.js",
     "bin": {
