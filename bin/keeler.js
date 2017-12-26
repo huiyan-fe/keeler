@@ -18,7 +18,7 @@ program
     .command('init')
     .description('init projiect')
     .action((options) => {
-        const pwd = process.env.PWD;
+        const pwd = process.cwd();
         init.init(process, pwd);
     })
 
@@ -26,7 +26,7 @@ program
     .command('add [name]')
     .description('add an new page \t 添加一个新的页面')
     .action((name) => {
-        const pwd = process.env.PWD;
+        const pwd = process.cwd();
         add(process, pwd, name);
     })
 
