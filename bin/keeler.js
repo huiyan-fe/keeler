@@ -35,16 +35,14 @@ program.parse(process.argv);
 // console.log(program.args)
 
 if (program.init) {
-    const pwd = process.env.PWD;
-    init.init(process, pwd);
+    init.init(process);
 };
 
 if (program.build) {
     // console.log(process.env.npm_config_page)
     // console.log('xxxxxxxxxx', program.build)
         // console.log('---', program.build !== true)
-    const pwd = process.env.PWD;
-    const key = program.build;
+    const pwd = process.cwd();
     build.scanEntry(process, pwd, program.build);
 };
 
