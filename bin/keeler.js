@@ -39,11 +39,8 @@ if (program.init) {
 };
 
 if (program.build) {
-    // console.log(process.env.npm_config_page)
-    // console.log('xxxxxxxxxx', program.build)
-        // console.log('---', program.build !== true)
     const pwd = process.cwd();
-    build.scanEntry(process, pwd, program.build);
+    build.scanEntry(process, pwd, process.env.PAGE);
 };
 
 
