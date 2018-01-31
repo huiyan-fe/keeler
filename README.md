@@ -85,10 +85,16 @@ PAGE=demo,pagea yarn dev
 keeler -b 命令执行时keeler会扫描目录下的所有 `*.entry.jsx`以及 `*.entry.scss` 文件，自动制作编译配置文件(`keel.entry.webpack.config.json`)，这个文件会被webpack所引用。
 
 
+### keeler add NAME
 
-## [TODO] 计划的接口如下：
+添加一个名为NAME的页面
+
+该命令执行完成之后，会自动的在项目的目录中新建
 
 ```
-keeler -add Name // 创建一个新的页面
+src/app/NAME/NAME.entry.jsx
+src/app/page/NAME/NAME.html
+src/app/page/static/scss/NAME/NAME.scss
 ```
 
+并自动处理好依赖关系（HTML文件会自动引入js和css）
