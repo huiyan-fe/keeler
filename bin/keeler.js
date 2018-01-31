@@ -64,7 +64,3 @@ if (program.add) {
         console.log('[keeler warning!] add muse hava a name')
     }
 };
-
-if (program.version) {
-    console.log('Version:', require('../package.json').version)
-};
