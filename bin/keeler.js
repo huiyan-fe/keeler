@@ -10,24 +10,36 @@ const add = require('../lib/add').add;
 program
     .version(require('../package.json').version)
     .usage('[options] [param]')
-    .option('-i, --init', 'init project')
+    .option('-i, --init', 'init project \t 初始化项目')
     .option('-b, --build [name]', 'build project')
-
+    .option('-a, --add [name]', 'add a new page \t 添加一个新的页面')
 
 program
     .command('init')
-    .description('init projiect')
+    .description('init projiect \t 初始化项目')
     .action((options) => {
         const pwd = process.cwd();
         init.init(process, pwd);
     })
 
 program
-    .command('add [name]')
-    .description('add an new page \t 添加一个新的页面')
-    .action((name) => {
+    .command('build')
+    .description('build projiect \t 建立项目索引')
+    .action((options) => {
         const pwd = process.cwd();
-        add(process, pwd, name);
+        build.scanEntry(process, pwd, process.env.PAGE);
+    })
+
+program
+    .command('add [name]')
+    .description('add a new page \t 添加一个新的页面')
+    .action((name) => {
+        if (name) {
+            const pwd = process.cwd();
+            add(process, pwd, name);
+        } else {
+            console.log('[keeler warning!] add muse hava a name')
+        }
     })
 
 program.parse(process.argv);
@@ -43,7 +55,16 @@ if (program.build) {
     build.scanEntry(process, pwd, process.env.PAGE);
 };
 
+if (program.add) {
+    if (program.add !== true) {
+        const name = program.add;
+        const pwd = process.cwd();
+        add(process, pwd, name);
+    } else {
+        console.log('[keeler warning!] add muse hava a name')
+    }
+};
 
 if (program.version) {
-    console.log(require('../package.json').version)
+    console.log('Version:', require('../package.json').version)
 };
